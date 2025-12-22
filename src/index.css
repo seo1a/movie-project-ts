@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MyCustomFont_Regular';
+  src: url('../src/assets/Freesentation-4Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont_Bold';
+  src: url('../src/assets/Freesentation-7Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont_Logo';
+  src: url('../src/assets/FontsFree-Net-Sonar-Hubermann-SaintRegus-SemiBoldExpanded.ttf') format('truetype');
+}
+
