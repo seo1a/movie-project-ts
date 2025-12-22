@@ -37,23 +37,23 @@ export default function SearchBar({
     },[value, filteredMovies])      // filteredMovies도 의존성 배열에 추가해줘야 실시간 렌더링 가능
 
     return (
-        <div className="relative flex items-center px-2 sm:px-4 md:px-6 lg:px-8 font-customRegular w-full">
+        <div className="relative flex items-center px-4 md:px-6 lg:px-8 font-customRegular">
             <input
                 id="search-bar"
                 type="search"
                 placeholder="영화를 검색해 보세요! 🎬"
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className="search-bar bg-white dark:bg-black w-full h-10 sm:h-12 pr-10 sm:pr-12 border-b border-gray-600 dark:border-gray-300 text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-400 focus:outline-none placeholder-gray-500 dark:placeholder-gray-400"
+                className="search-bar bg-white dark:bg-black w-full md:w-96 h-12 border-b border-gray-600 dark:border-gray-300 text-xl text-gray-700 dark:text-gray-400 focus:outline-none placeholder-gray-500 dark:placeholder-gray-400"
             />
             {/* 조건부 렌더링 → showDropdown이 true일 때만 우측 () 내부 코드 실행 */}
             {showDropdown && (
-                <ul className="absolute left-0 sm:left-2 md:left-4 lg:left-6 top-full mt-1 w-full sm:w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] lg:w-[calc(100%-3rem)] max-w-md z-50 bg-white dark:bg-black border border-gray-300 dark:border-gray-900 shadow-lg overflow-hidden bg-opacity-80 rounded-b">
+                <ul className="absolute left-0 top-full left-1/2 w-[90%] transform -translate-x-1/2 mt-1 z-50 bg-white dark:bg-black border border-gray-300 dark:border-gray-900 shadow-lg overflow-hidden bg-opacity-80">
                     {filteredSuggestions.map((suggestion) => (
                         <Link to={`/detail/${suggestion.id}`} key={suggestion.id}>
                         <li
                             key={suggestion.id}
-                            className="p-2 sm:p-3 text-sm sm:text-base text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer transition-all"
+                            className="p-3 text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white cursor-pointer transition-all"
                             onClick={() => {
                                 setValue(suggestion.title);
                                 setShowDropdown(false);
@@ -67,13 +67,13 @@ export default function SearchBar({
               </ul>
             )}
             <button 
-                className="p-2 cursor-pointer absolute right-2 sm:right-4 md:right-6 lg:right-8 flex-shrink-0"
+                className="ml-3 p-2 cursor-pointer absolute right-0"
                 onClick={() => {
                     setShowDropdown(false);
                     setSearchResults(filteredMovies);
                 }}
             >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="gray" className="w-5 h-5 sm:w-6 sm:h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="gray" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
             </button>

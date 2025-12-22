@@ -34,7 +34,7 @@ export default function Movie({
     }, [isFavorite, dispatch, id, title, posterPath, voteAvg]);
 
     return(
-        <div className="movie-container text-black dark:text-white w-full max-w-[140px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[240px] mx-auto my-4 sm:my-6 md:my-8 relative group">
+        <div className="movie-container text-black dark:text-white w-[140px] md:w-[240px] lg:w-[240px] mx-2 sm:mx-5 my-8 relative group">
             <Link to={`/detail/${id}`}>
                 <div className="relative w-full h-0 pb-[150%]">
                     <img 
@@ -44,13 +44,13 @@ export default function Movie({
                     />
                 </div>
             </Link>
-            <div className="movie-info pt-2 sm:pt-3">
+            <div className="movie-info pt-3">
                 <Link to={`/detail/${id}`}>
-                    <h2 className="font-customBold dark:font-customRegular text-sm sm:text-base md:text-lg lg:text-xl line-clamp-2">{truncate(title, 15)}</h2>
+                    <h2 className="font-customBold dark:font-customRegular text-[16px] sm:text-[18px] md:text-[22px]">{truncate(title, 15)}</h2>
                 </Link>
-                <div className="flex justify-between items-center text-xs sm:text-sm md:text-base lg:text-xl mt-1 sm:mt-2">
-                    <span className="font-customRegular">⭐{voteAvg.toFixed(1)}</span>
-                    <span className="cursor-pointer text-base sm:text-lg md:text-xl" onClick={handleClick}>
+                <div className="flex justify-between text-[14px] sm:text-[16px] md:text-xl">
+                    <span className="font-customRegular">⭐{voteAvg}</span>
+                    <span className="cursor-pointer" onClick={handleClick}>
                         {isFavorite ? "❤️" : "🤍"}
                     </span>
                 </div>

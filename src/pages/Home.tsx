@@ -39,22 +39,20 @@ export default function Home({
     }, [searchResults, sortType]);
 
     return(
-        <div className="bg-white dark:bg-black min-h-screen">
-            <div className="px-4 sm:px-6 md:px-10 lg:px-24 pt-6 sm:pt-8 md:pt-10 lg:pt-16">
-                <select
-                    value={sortType}
-                    onChange={(e) => setSortType(e.target.value as "default" | "rating" | "latest" | "oldest")}
-                    className="font-customRegular p-2 sm:p-2.5 bg-white dark:bg-black text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white text-sm sm:text-base md:text-lg cursor-pointer border border-gray-300 dark:border-gray-700 rounded"
-                >
-                    <option value="default">기본 정렬</option>
-                    <option value="rating">평점순</option>
-                    <option value="latest">최신순</option>
-                    <option value="oldest">오래된순</option>
-                </select>
-            </div>
+        <div className="bg-white dark:bg-black">
+            <select
+                value={sortType}
+                onChange={(e) => setSortType(e.target.value as "default" | "rating" | "latest" | "oldest")}
+                className="font-customRegular ml-10 md:ml-24 mt-10 md:mt-16 md:p-2 bg-white dark:bg-black text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white text-md md:text-lg lg:text-lg cursor-pointer"
+            >
+                <option value="default">기본 정렬</option>
+                <option value="rating">평점순</option>
+                <option value="latest">최신순</option>
+                <option value="oldest">오래된순</option>
+            </select>
 
-            <div className="flex bg-white dark:bg-black justify-center w-full px-2 sm:px-4 md:px-6 lg:px-12 py-4 sm:py-5 md:py-8">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5 w-full max-w-7xl">
+            <div className="flex bg-white dark:bg-black min-h-screen justify-center w-full sm:px-12 py-5 md:py-8">
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 ">
                     {sortedMovies.length > 0 ? (
                         sortedMovies.map((movie) => (
                             <Movie
@@ -68,7 +66,7 @@ export default function Home({
                             />
                         ))
                     ) : (
-                        <p className="font-customBold text-center col-span-full text-base sm:text-lg md:text-xl text-gray-400 py-8 sm:py-12">검색 결과가 없습니다.</p>
+                        <p className="font-customBold text-center col-span-full text-lg text-gray-400">검색 결과가 없습니다.</p>
                     )}
                 </div>
             </div>

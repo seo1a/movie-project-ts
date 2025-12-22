@@ -68,10 +68,10 @@ export default function Favorite({ favorites, dispatch }: FavoriteProps) {
     }, [dispatch])
 
     return(
-        <div className="flex bg-white dark:bg-black min-h-screen justify-center px-2 sm:px-4 md:px-6 lg:px-12 py-8 sm:py-12 md:py-16">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-5 w-full max-w-7xl">
+        <div className="flex bg-white dark:bg-black min-h-screen justify-center px-12 py-16">
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3">
                 {favorites.length === 0 ? (
-                    <p className="font-customBold text-center col-span-full text-base sm:text-lg md:text-xl text-gray-400 py-8 sm:py-12">관심 있는 영화가 없슴다 -.-;;</p>
+                    <p className="font-customBold text-center col-span-full text-lg text-gray-400">관심 있는 영화가 없슴다 -.-;;</p>
                 ) : (
                     favorites.map((movie) => (
                         <Movie
