@@ -58,7 +58,44 @@ React + TypeScript 기반으로 TMDB API를 활용한 영화 정보 조회 웹 �
 <br>
 
 ## 📁프로젝트 구조 <br>
-![project_directory](https://raw.githubusercontent.com/seo1a/movie-project-ts/refs/heads/main/tree.JPG)
+
+```
+movie-project-ts
+├── node_modules
+├── public
+├── src
+│   ├── assets              
+│   ├── components            
+│   │   ├── Header.tsx        
+│   │   ├── Movie.tsx        
+│   │   ├── SearchBar.tsx     
+│   │   └── ThemeToggle.tsx   
+│   ├── pages                
+│   │   ├── Home.tsx          
+│   │   ├── Detail.tsx        
+│   │   └── Favorite.tsx      
+│   ├── types
+│   │   └── movie.ts          
+│   ├── api.ts                
+│   ├── App.tsx               
+│   ├── App.css
+│   ├── index.css             
+│   ├── main.tsx              
+│   └── vite-env.d.ts
+├── .env                   
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
 <br>
 <br>
 <br>
