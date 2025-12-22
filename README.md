@@ -15,7 +15,7 @@ Movie Project는 TMDB(https://www.themoviedb.org/) API로부터 영화 데이터
 사용자는 영화 검색 시 자동완성 검색어 드롭다운, 다양한 정렬 기준(평점순/최신순/오래된순), 상세 정보 보기, 그리고 다크/라이트 모드 및 즐겨찾기 기능을 통해 더욱 편리한 탐색 경험을 제공합니다.<br><br><br>
 
 ## 🌐배포
-https://movie-project-ts-eosin.vercel.app/
+[🔗 https://movie-project-ts-eosin.vercel.app](https://movie-project-ts-eosin.vercel.app)
 <br>
 <br>
 <br>
@@ -70,7 +70,7 @@ React + TypeScript 기반으로 TMDB API를 활용한 영화 정보 조회 웹 �
 
 - **영화 정렬**: 홈 화면에서 기본 정렬(기본 API 정렬), 평점 높은 순, 개봉 최신 순, 개봉 오래된 순의 4가지 기준으로 정렬 가능합니다
 
-- **영화 상세정보**: 영화 포스터 이미지 클릭 시 영화 소개(overview) 및 개봉일 등의 상세 정보를 확인할 수 있습니다.
+- **영화 상세정보**: 영화 포스터 이미지 클릭 시 영화 제목, 개요, 개봉일, 평점 등 상세 정보를 표시합니다.
 
 - **즐겨찾기**: 각 영화에 하트 아이콘을 눌러 즐겨찾기에 저장할 수 있습니다. 즐겨찾기 리스트는 local storage에 저장되어 새로고침 후에도 유지됩니다.
 
@@ -103,11 +103,10 @@ npm run dev
 다음과 같이 `.env` 파일을 루트 디렉토리에 생성하고 API 키를 입력해주세요: <br>
 
 ```
-VITE_OMDB_API_KEY=YOUR_OMDB_API_KEY
 VITE_TMDB_API_KEY=YOUR_TMDB_API_KEY
 
 
-`YOUR_OMDB_API_KEY` 부분에 본인의 실제 키를 입력해주세요!
+`YOUR_TMDB_API_KEY` 부분에 본인의 실제 키를 입력해주세요!
 ```
 <br>
 <br>
