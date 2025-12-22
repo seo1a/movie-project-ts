@@ -39,26 +39,39 @@ https://movie-project-ts-eosin.vercel.app/
 <br>
 <br>
 <br>
+<br>
 
 ## 🧩기술 스택 <br>
 
+React + TypeScript 기반으로 TMDB API를 활용한 영화 정보 조회 웹 애플리케이션<br><br>
+
 ### 1. 프론트엔드 <br>
-- <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> : UI 구성 및 상태 관리
-- <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/> : 빠른 번들링을 위한 개발 환경
-- <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/> : 기본 프로그래밍 언어
-- <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white"/> : 유틸리티 기반의 스타일링 프레임워크
-- <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"/> : 비동기 API 요청 처리
+- <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> : UI 컴포넌트 구성 및 상태 관리
+- <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/> : 정적 타입을 통한 안정적인 개발 및 유지보수성 향상
+- <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/> : 빠른 개발 서버 및 번들링 환경 구성
+- <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/> : 페이지 단위 라우팅 및 상세 페이지 구성
+- <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white"/> : 유틸리티 기반 스타일링을 통한 반응형 UI 구현
 <br>
 
-### 2. Serverless API (백엔드 역할) <br>
-- <img src="https://img.shields.io/badge/Vercel_Serverless-000000?style=for-the-badge&logo=vercel&logoColor=white"/> (`/api`)  
-  - 클라이언트에서 분리된 데이터 처리용 api
-  - 네이버, 카카오맵, 구글 리뷰 데이터를 수집
-  - 초기 기획 단계에서는 puppeteer를 이용한 크롤링을 고려했지만, 검색 시간을 줄여주는 것이 목표인 프로젝트에서 속도가 현저히 떨어지는 puppeteer를 사용하는 것이 기획 의도에서 벗어났다고 판단했습니다. 따라서 서버리스 함수 기반 api를 사용하여 가벼운 로딩시간으로 쾌적한 성능을 제공하고자 했습니다.
+### 2. 상태 관리 및 로직 <br>
+- <img src="https://img.shields.io/badge/React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black"/> : `useState`, `useEffect`, `useReducer`, `useMemo`를 활용한 상태 및 성능 관리
+- <img src="https://img.shields.io/badge/LocalStorage-FFA500?style=for-the-badge"/> : 즐겨찾기 및 UI 상태(다크/라이트 모드) 영속성 유지
 <br>
 
-### 3. 배포 <br>
-- <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>: 프론트엔드 및 서버리스 백엔드 통합 배포
+### 3. API & 데이터 통신 <br>
+- <img src="https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white"/> : 영화 목록, 상세 정보 등 영화 데이터 제공
+- <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"/> : 비동기 API 요청 처리 및 데이터 페칭
+<br>
+
+### 4. 배포 <br>
+- <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/> : 프론트엔드 애플리케이션 배포 및 환경 변수 관리
+<br>
+
+### 5. 개발 환경 <br>
+- <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/> : 버전 관리
+- <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> : 소스 코드 관리 및 프로젝트 문서화
+<br>
+
 <br>
 <br>
 <br>
@@ -91,12 +104,11 @@ npm run dev
 다음과 같이 `.env` 파일을 루트 디렉토리에 생성하고 API 키를 입력해주세요: <br>
 
 ```
-NAVER_CLIENT_ID=YOUR_NAVER_API_ID
-NAVER_CLIENT_SECRET=YOUR_NAVER_API_SECRET
-GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_API_KEY
-VITE_KAKAO_MAP_API_KEY=YOUR_KAKAO_API_KEY
+VITE_OMDB_API_KEY=YOUR_OMDB_API_KEY
+VITE_TMDB_API_KEY=YOUR_TMDB_API_KEY
 
-`YOUR_NAVER_API_ID` 부분에 본인의 실제 키를 입력해주세요!
+
+`YOUR_OMDB_API_KEY` 부분에 본인의 실제 키를 입력해주세요!
 ```
 <br>
 <br>
