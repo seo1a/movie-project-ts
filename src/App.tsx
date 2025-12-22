@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useReducer, useMemo } from "react";
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -58,7 +57,6 @@ function AppContent({
   setAllMovies, 
   filteredMovies, 
   setFilteredMovies, 
-  searchResults, 
   setSearchResults 
 }: AppProps) {
 
@@ -97,7 +95,7 @@ function AppContent({
     initializer
   );
 
-  const [sortType, setSortType] = useState<"default" | "rating" | "latest" | "oldest">("default");
+  const [sortType] = useState<"default" | "rating" | "latest" | "oldest">("default");
 
   const sortedMovies = useMemo<movie[]>(() => {
     let sorted = [...filteredMovies];
