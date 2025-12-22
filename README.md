@@ -11,7 +11,7 @@
 <br>
 
 ## 🎬 프로젝트 소개
-Movie Project는 TMDB(https://www.themoviedb.org/) API로부터 영화 데이터를 받아와 현재 극장 상영 중인 영화 목록을 조회·검색·정렬·즐겨찾기할 수 있는 반응형 웹 애플리케이션입니다.
+Movie Project는 TMDB(The Movie Database) API로부터 영화 데이터를 받아와 현재 상영 중인 영화 목록을 조회·검색·정렬·즐겨찾기할 수 있는 반응형 웹 애플리케이션입니다.
 사용자는 영화 검색 시 자동완성 검색어 드롭다운, 다양한 정렬 기준(평점순/최신순/오래된순), 상세 정보 보기, 그리고 다크/라이트 모드 및 즐겨찾기 기능을 통해 더욱 편리한 탐색 경험을 제공합니다.<br><br><br>
 
 ## 🌐배포
@@ -41,7 +41,7 @@ React + TypeScript 기반으로 TMDB API를 활용한 영화 정보 조회 웹 �
 
 ### 3. API & 데이터 통신 <br>
 - <img src="https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white"/> : 영화 목록, 상세 정보 등 영화 데이터 제공
-- <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"/> : 비동기 API 요청 처리 및 데이터 페칭
+- <img src="https://img.shields.io/badge/Fetch_API-FF6F00?style=for-the-badge"/> : 네이티브 Fetch API를 활용한 비동기 데이터 페칭
 <br>
 
 ### 4. 배포 <br>
@@ -64,20 +64,20 @@ movie-project-ts
 ├── node_modules
 ├── public
 ├── src
-│   ├── assets              
-│   ├── components            
-│   │   ├── Header.tsx        
-│   │   ├── Movie.tsx        
-│   │   ├── SearchBar.tsx     
-│   │   └── ThemeToggle.tsx   
-│   ├── pages                
-│   │   ├── Home.tsx          
-│   │   ├── Detail.tsx        
-│   │   └── Favorite.tsx      
-│   ├── types
-│   │   └── movie.ts          
-│   ├── api.ts                
-│   ├── App.tsx               
+│   ├── assets                 # 이미지, 폰트 등 정적 자원
+│   ├── components             # 재사용 가능한 UI 컴포넌트
+│   │   ├── Header.tsx         # 헤더 및 검색바 컴포넌트
+│   │   ├── Movie.tsx          # 영화 카드 컴포넌트
+│   │   ├── SearchBar.tsx      # 검색바 및 자동완성 드롭다운
+│   │   └── ThemeToggle.tsx    # 다크/라이트 모드 전환 버튼
+│   ├── pages                  # 페이지 컴포넌트
+│   │   ├── Home.tsx           # 메인 페이지 (영화 목록)
+│   │   ├── Detail.tsx         # 영화 상세 정보 페이지
+│   │   └── Favorite.tsx       # 즐겨찾기 페이지
+│   ├── types                  # TypeScript 타입 정의
+│   │   └── movie.ts           # 영화 데이터 타입
+│   ├── api.ts                 # TMDB API 통신 로직
+│   ├── App.tsx                 # 메인 앱 컴포넌트 및 라우팅
 │   ├── App.css
 │   ├── index.css             
 │   ├── main.tsx              
@@ -113,6 +113,8 @@ movie-project-ts
 
 - **다크/라이트 모드**: 유저가 클릭으로 다크/라이트 모드 간 전환할 수 있습니다.
 
+- **성능 최적화**: `useMemo`와 `useCallback`을 활용하여 불필요한 리렌더링을 방지하고 성능을 최적화했습니다.
+
 - **반응형 UI**: 모바일, 데스크탑에 최적화 된 사용자 경험을 제공합니다.
 <br>
 <br>
@@ -121,7 +123,7 @@ movie-project-ts
 
 ## 🛠설치 및 실행 방법 <br>
 ```bash
-# 리포지터리 복제
+# 리포지토리 복제
 git clone https://github.com/seo1a/movie-project-ts.git
 cd movie-project-ts
 
@@ -144,6 +146,7 @@ VITE_TMDB_API_KEY=YOUR_TMDB_API_KEY
 
 
 `YOUR_TMDB_API_KEY` 부분에 본인의 실제 키를 입력해주세요!
+
 ```
 <br>
 <br>
