@@ -1,4 +1,4 @@
-# 🍕JMT searcher
+# 🎬MOVIE PROJECT
 <img src="https://raw.githubusercontent.com/seo1a/movie-project-ts/refs/heads/main/movie-project-home.png" alt="movie-project-home" width="700"/>
 <br><br>
 
