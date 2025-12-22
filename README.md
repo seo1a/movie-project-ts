@@ -1,11 +1,11 @@
 # 🍕JMT searcher
-<img src="https://github.com/user-attachments/assets/3e64e763-ee8c-4057-a5d0-e64a718aaff7" alt="jonmat_searcher" width="700"/>
+<img src="https://raw.githubusercontent.com/seo1a/movie-project-ts/refs/heads/main/movie-project-home.png" alt="movie-project-home" width="700"/>
 <br><br>
 
 <details>
   <summary>📱모바일 UI 확인하기</summary> 
   
-  <img src="https://github.com/user-attachments/assets/13942e36-5607-42c4-82f2-134f813b104a" alt="jonmat_searcher_mobile" width="300"/>
+  <img src="https://raw.githubusercontent.com/seo1a/movie-project-ts/refs/heads/main/movie-project-home-mobile.png" alt="movie-project-mobile" width="300"/>
   
 </details>
 <br>
@@ -15,7 +15,7 @@ Movie Project는 TMDB(https://www.themoviedb.org/) API로부터 영화 데이터
 사용자는 영화 검색 시 자동완성 검색어 드롭다운, 다양한 정렬 기준(평점순/최신순/오래된순), 상세 정보 보기, 그리고 다크/라이트 모드 및 즐겨찾기 기능을 통해 더욱 편리한 탐색 경험을 제공합니다.<br><br><br>
 
 ## 🌐배포
-https://movie-project-2-ten.vercel.app
+https://movie-project-ts-eosin.vercel.app/
 <br>
 <br>
 <br>
