@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect, useReducer, useMemo } from "react";
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -8,6 +8,8 @@ import { fetchMultiplePages } from "./api";
 import { favoritesReducer } from "./pages/Favorite";
 import { isFavorite } from "./pages/Favorite";
 import type { movie } from "./types/movie";
+import ReactGA from "react-ga4";
+import usePageTracking from "./hooks/usePageTracking";
 
 interface AppProps {
   value: string;
@@ -32,21 +34,23 @@ type Action =
         movies: movie[];
     };
 
+ReactGA.initialize(import.meta.env.VITE_GA_ID);
+
 export default function App() {
   const [value, setValue] = useState<string>("");
   const [allMovies, setAllMovies] = useState<movie[]>([]);
   const [filteredMovies, setFilteredMovies] = useState<movie[]>([]);   // 검색어 타이핑에 따라 실시간 필터링
   const [searchResults, setSearchResults] = useState<movie[]>([]);     // 검색 버튼을 누르고 난 후 필터링
 
-  return (
-      <Router>
-        <AppContent 
-          value={value} setValue={setValue} 
-          allMovies={allMovies} setAllMovies={setAllMovies} 
-          filteredMovies={filteredMovies} setFilteredMovies={setFilteredMovies} 
-          searchResults={searchResults} setSearchResults={setSearchResults}
-        />
-      </Router>
+  usePageTracking();
+
+  return (  
+      <AppContent 
+        value={value} setValue={setValue} 
+        allMovies={allMovies} setAllMovies={setAllMovies} 
+        filteredMovies={filteredMovies} setFilteredMovies={setFilteredMovies} 
+        searchResults={searchResults} setSearchResults={setSearchResults}
+      />
     );
 }
 
